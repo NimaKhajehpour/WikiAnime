@@ -1,0 +1,52 @@
+query MediaPage($mediaId: Int){
+    Media(id: $mediaId) {
+        title {
+            userPreferred
+        }
+        description(asHtml: true)
+        bannerImage
+        format
+        meanScore
+        averageScore
+        status
+        startDate {
+            day
+            month
+            year
+        }
+        popularity
+        favourites
+        studios(isMain: true) {
+            nodes {
+                name
+            }
+        }
+        duration
+        source
+        genres
+        recommendations {
+            nodes {
+                mediaRecommendation {
+                    coverImage {
+                        extraLarge
+                        large
+                        color
+                    }
+                    episodes
+                    studios(isMain: true){
+                        nodes {
+                            name
+                        }
+                    }
+                    genres
+                    id
+                    title {
+                        userPreferred
+                    }
+                    averageScore
+                    format
+                }
+            }
+        }
+    }
+}

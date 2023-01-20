@@ -1,0 +1,30 @@
+query TrendingNow($page: Int, $perPage: Int){
+    Page (page: $page, perPage: $perPage){
+        media (sort: TRENDING_DESC, isAdult: false){
+            title {
+                userPreferred
+            }
+            coverImage {
+                color
+                extraLarge
+                large
+            }
+            id
+            averageScore
+            studios(isMain: true) {
+                nodes {
+                    name
+                }
+            }
+            format
+            episodes
+            genres
+        }
+        pageInfo {
+            currentPage
+            hasNextPage
+            lastPage
+            total
+        }
+    }
+}

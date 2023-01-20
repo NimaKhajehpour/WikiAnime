@@ -1,0 +1,30 @@
+query AllGenreMedias($page: Int, $genre: String){
+    Page (page: $page){
+        pageInfo {
+            currentPage
+            hasNextPage
+            lastPage
+            total
+        }
+        media (isAdult: false, genre: $genre){
+            id
+            title {
+                userPreferred
+            }
+            coverImage {
+                color
+                extraLarge
+                large
+            }
+            averageScore
+            studios(isMain: true) {
+                nodes {
+                    name
+                }
+            }
+            format
+            episodes
+            genres
+        }
+    }
+}

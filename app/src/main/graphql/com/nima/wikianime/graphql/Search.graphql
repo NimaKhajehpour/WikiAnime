@@ -1,0 +1,32 @@
+query Search($page: Int, $search: String, $genre: String,
+    $seasonYear: Int, $season: MediaSeason, $format: MediaFormat, $sort: [MediaSort]){
+    Page(page: $page) {
+        media(search: $search, genre: $genre, seasonYear: $seasonYear,
+            season: $season, format: $format, isAdult: false, sort: $sort) {
+            id
+            title {
+                userPreferred
+            }
+            coverImage {
+                color
+                extraLarge
+                large
+            }
+            averageScore
+            studios(isMain: true) {
+                nodes {
+                    name
+                }
+            }
+            format
+            episodes
+            genres
+        }
+        pageInfo {
+            currentPage
+            hasNextPage
+            lastPage
+            total
+        }
+    }
+}
