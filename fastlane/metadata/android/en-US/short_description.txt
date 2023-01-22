@@ -1,1 +1,1 @@
-Wiki Anime is an application that uses anilist api and gives you details about your favorite anime.
+Wiki Anime is an application that gives you details about your favorite anime.
