@@ -89,7 +89,15 @@ fun ThumbnailItem(
                     colors = CardDefaults.elevatedCardColors(
                         contentColor = Color(
                             parseColor(
-                                if (compColor.length == 5) "#0$compColor" else "#$compColor"
+                            when(compColor.length){
+                                5 -> "#0$compColor"
+                                4 -> "#00$compColor"
+                                3 -> "#000$compColor"
+                                2 -> "#0000$compColor"
+                                1 -> "#00000$compColor"
+                                0 -> "#000000$compColor"
+                                else -> "#$compColor"
+                            }
                             )
                         ),
                         containerColor = Color(color)
@@ -112,7 +120,15 @@ fun ThumbnailItem(
                     colors = CardDefaults.elevatedCardColors(
                         contentColor = Color(
                             parseColor(
-                                if (compColor.length == 5) "#0$compColor" else "#$compColor"
+                                when(compColor.length){
+                                    5 -> "#0$compColor"
+                                    4 -> "#00$compColor"
+                                    3 -> "#000$compColor"
+                                    2 -> "#0000$compColor"
+                                    1 -> "#00000$compColor"
+                                    0 -> "#000000$compColor"
+                                    else -> "#$compColor"
+                                }
                             )
                         ),
                         containerColor = Color(color)
@@ -209,7 +225,15 @@ fun ThumbnailItem(
                     colors = CardDefaults.elevatedCardColors(
                         contentColor = Color(
                             parseColor(
-                                if (compColor.length == 5) "#0$compColor" else "#$compColor"
+                                when(compColor.length){
+                                    5 -> "#0$compColor"
+                                    4 -> "#00$compColor"
+                                    3 -> "#000$compColor"
+                                    2 -> "#0000$compColor"
+                                    1 -> "#00000$compColor"
+                                    0 -> "#000000$compColor"
+                                    else -> "#$compColor"
+                                }
                             )
                         ),
                         containerColor = Color(color)
@@ -232,7 +256,15 @@ fun ThumbnailItem(
                     colors = CardDefaults.elevatedCardColors(
                         contentColor = Color(
                             parseColor(
-                                if (compColor.length == 5) "#0$compColor" else "#$compColor"
+                                when(compColor.length){
+                                    5 -> "#0$compColor"
+                                    4 -> "#00$compColor"
+                                    3 -> "#000$compColor"
+                                    2 -> "#0000$compColor"
+                                    1 -> "#00000$compColor"
+                                    0 -> "#000000$compColor"
+                                    else -> "#$compColor"
+                                }
                             )
                         ),
                         containerColor = Color(color)
@@ -329,7 +361,15 @@ fun ThumbnailItem(
                     colors = CardDefaults.elevatedCardColors(
                         contentColor = Color(
                             parseColor(
-                                if (compColor.length == 5) "#0$compColor" else "#$compColor"
+                                when(compColor.length){
+                                    5 -> "#0$compColor"
+                                    4 -> "#00$compColor"
+                                    3 -> "#000$compColor"
+                                    2 -> "#0000$compColor"
+                                    1 -> "#00000$compColor"
+                                    0 -> "#000000$compColor"
+                                    else -> "#$compColor"
+                                }
                             )
                         ),
                         containerColor = Color(color)
@@ -352,7 +392,15 @@ fun ThumbnailItem(
                     colors = CardDefaults.elevatedCardColors(
                         contentColor = Color(
                             parseColor(
-                                if (compColor.length == 5) "#0$compColor" else "#$compColor"
+                                when(compColor.length){
+                                    5 -> "#0$compColor"
+                                    4 -> "#00$compColor"
+                                    3 -> "#000$compColor"
+                                    2 -> "#0000$compColor"
+                                    1 -> "#00000$compColor"
+                                    0 -> "#000000$compColor"
+                                    else -> "#$compColor"
+                                }
                             )
                         ),
                         containerColor = Color(color)
